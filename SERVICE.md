@@ -37,9 +37,17 @@ https://gist.github.com/mysubb01/abfd2f8da7505a24f5cefe377563fb5f
 
 Do not post secrets, tokens, private customer data, payment details, or credentials in a public issue.
 
+## Payment Handoff
+
+- GitHub issues are only for sanitized intake, scope, budget, and acceptance criteria.
+- Do not post card, bank, wallet, customer, token, or credential details in public.
+- After the scope and quote are accepted, payment link, invoice, or private handoff happens outside the public issue.
+- Work starts after scope, delivery format, and payment path are agreed.
+
 ## How Scope Is Confirmed
 
 1. You open a public request with sanitized context.
 2. I reply with a proposed scope, price, and acceptance criteria.
-3. Private repo access, sensitive logs, and payment details are handled outside the public issue.
-4. Work starts only after scope and payment path are agreed.
+3. If the scope fits, I provide a private invoice or payment handoff before work starts.
+4. Private repo access, sensitive logs, and payment details are handled outside the public issue.
+5. Work starts only after scope, delivery format, and payment path are agreed.

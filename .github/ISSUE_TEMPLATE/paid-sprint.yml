@@ -10,6 +10,8 @@ body:
         Use this for a small paid request around production debugging, AI-agent workflow cleanup, code review prompts, deploy smoke checks, or internal automation.
 
         Do not post secrets, tokens, private customer data, payment details, or credentials. Share public repo links or sanitized context only.
+
+        This public issue is for sanitized intake, scope, budget, and acceptance criteria. If the request fits, invoice/payment handoff happens privately before work starts.
   - type: dropdown
     id: sprint-type
     attributes:
@@ -71,4 +73,6 @@ body:
         - label: I have not included secrets, credentials, private payment details, or private customer data.
           required: true
         - label: I understand this public issue is only an intake request; private details and payment flow should be handled outside the public issue.
+          required: true
+        - label: I understand work starts only after scope, delivery format, and payment path are agreed.
           required: true

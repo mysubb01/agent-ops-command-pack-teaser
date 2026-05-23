@@ -1,0 +1,22 @@
+{
+  "name": "agent-ops-mini-sprint",
+  "description": "Evidence-first incident triage, PR risk review, deploy smoke, and handoff workflows for AI coding agents working on real operations issues.",
+  "version": "0.1.0",
+  "author": {
+    "name": "mysubb01",
+    "url": "https://github.com/mysubb01"
+  },
+  "repository": "https://github.com/mysubb01/agent-ops-command-pack-teaser",
+  "homepage": "https://mysubb01.github.io/agent-ops-command-pack-teaser/order.html",
+  "license": "LicenseRef-Agent-Ops-Public-Preview",
+  "keywords": [
+    "agent-ops",
+    "incident-response",
+    "code-review",
+    "deploy-smoke",
+    "handoff"
+  ],
+  "skills": [
+    "./skills/agent-ops-mini-sprint"
+  ]
+}

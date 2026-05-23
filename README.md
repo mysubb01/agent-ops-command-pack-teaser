@@ -32,6 +32,16 @@ Fixed starter requests:
 - PR risk review: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-pr-risk-review.yml
 - Deploy smoke pack: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-deploy-smoke.yml
 
+## Copilot Plugin Preview
+
+This repository now includes an installable Copilot plugin preview:
+
+- Plugin name: `agent-ops-mini-sprint`
+- Manifest: [`.github/plugin/plugin.json`](./.github/plugin/plugin.json)
+- Skill: [`skills/agent-ops-mini-sprint/SKILL.md`](./skills/agent-ops-mini-sprint/SKILL.md)
+
+It packages the public Agent Ops operating workflow for incident triage, PR risk review, deploy smoke checks, and handoff notes. The plugin is free preview material; paid human-reviewed mini-sprints still start from the fast order page.
+
 ## Buy / Preview
 
 - Buy page: https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html

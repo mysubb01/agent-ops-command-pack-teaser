@@ -31,6 +31,10 @@ Open a paid mini-sprint request:
 
 https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=paid-sprint.yml
 
+External share page:
+
+https://gist.github.com/mysubb01/abfd2f8da7505a24f5cefe377563fb5f
+
 Do not post secrets, tokens, private customer data, payment details, or credentials in a public issue.
 
 ## How Scope Is Confirmed

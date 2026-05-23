@@ -8,6 +8,7 @@ This public repo is the preview page for a paid digital pack. It intentionally i
 
 - Buy page: https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html
 - Paid mini-sprints: https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
+- Shareable Gist: https://gist.github.com/mysubb01/abfd2f8da7505a24f5cefe377563fb5f
 - Suggested launch price: 9 USD or equivalent
 - Purchase request: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
 - Paid work request: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=paid-sprint.yml
@@ -61,6 +62,10 @@ Best first scopes:
 - internal workflow automation scope
 
 See [SERVICE.md](./SERVICE.md) for starter offers and safety rules.
+
+External share page:
+
+https://gist.github.com/mysubb01/abfd2f8da7505a24f5cefe377563fb5f
 
 Sample deliverables:
 

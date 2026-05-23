@@ -25,9 +25,11 @@ The full pack includes:
 
 The checkout URL is not connected yet because marketplace payout setup requires account and identity/payment details.
 
-Until then, purchase interest is collected through the GitHub issue template:
+Until then, purchase requests are collected through the GitHub issue template:
 
 https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
+
+Do not post private payment details, email addresses, tokens, or credentials in a public GitHub issue.
 
 ## Can I use the free samples commercially?
 
@@ -42,4 +44,3 @@ This is for solo developers, small teams using AI coding agents, operators who n
 ## Suggested price
 
 The initial test price is 9 USD or equivalent.
-

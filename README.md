@@ -24,9 +24,11 @@ https://mysubb01.github.io/agent-ops-command-pack-teaser/generator.html
 
 ## Purchase Interest
 
-Checkout is not connected yet. To ask about buying the full pack, open a purchase-interest issue:
+Checkout is not connected yet. To request the full pack and receive the checkout/payment link when available, open a purchase request:
 
 https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
+
+See [BUY.md](./BUY.md) for price, delivery, and license notes.
 
 Read the [FAQ](./FAQ.md) and [license notes](./LICENSE.md) before redistributing anything.
 

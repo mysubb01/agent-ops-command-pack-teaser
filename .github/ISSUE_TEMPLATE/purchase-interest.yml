@@ -1,15 +1,24 @@
-name: Purchase interest
-description: Ask about buying Agent Ops Command Pack before checkout is connected.
-title: "Purchase interest: Agent Ops Command Pack"
+name: Purchase request
+description: Request the Agent Ops Command Pack purchase link before checkout is connected.
+title: "Purchase request: Agent Ops Command Pack"
 labels:
   - purchase-interest
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in Agent Ops Command Pack.
+        Thanks for your interest in Agent Ops Command Pack. The suggested launch price is 9 USD or equivalent.
 
-        Checkout is not connected yet, so this issue template collects purchase intent and questions.
+        Checkout is not connected yet, so this issue records buyer intent. Do not post private payment details, email addresses, tokens, or credentials here.
+  - type: checkboxes
+    id: buyer-intent
+    attributes:
+      label: Buyer intent
+      options:
+        - label: I want the full pack and would like a checkout/payment link when available.
+          required: true
+        - label: I understand the current suggested launch price is 9 USD or equivalent for a solo/internal-use license.
+          required: true
   - type: dropdown
     id: license
     attributes:
@@ -21,12 +30,30 @@ body:
         - Not sure yet
     validations:
       required: true
+  - type: input
+    id: quantity
+    attributes:
+      label: Seats or team size
+      description: Use a rough number. Do not include private personal details.
+      placeholder: "Example: 1 solo seat, 3-person team, internal workspace"
+    validations:
+      required: true
   - type: textarea
     id: use-case
     attributes:
       label: Use case
       description: What kind of AI operations workflow do you want to improve?
       placeholder: "Example: incident triage, deploy checks, code review prompts, data correction safety..."
+    validations:
+      required: true
+  - type: dropdown
+    id: purchase-readiness
+    attributes:
+      label: Purchase readiness
+      options:
+        - Ready to buy when checkout is available
+        - Need one question answered first
+        - Evaluating for later
     validations:
       required: true
   - type: dropdown
@@ -49,4 +76,3 @@ body:
       description: Any questions before buying?
     validations:
       required: false
-

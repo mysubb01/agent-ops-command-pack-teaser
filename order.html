@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Agent Ops 미니 스프린트를 빠르게 주문하기 위한 고정 범위 선택 페이지. 버그 트리아지, PR 리스크 리뷰, 배포 스모크팩을 선택할 수 있습니다."
+    />
+    <link rel="canonical" href="https://mysubb01.github.io/agent-ops-command-pack-teaser/order.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Order Agent Ops Mini-Sprint" />
+    <meta
+      property="og:description"
+      content="Choose a fixed-scope Agent Ops mini-sprint and open a sanitized GitHub request."
+    />
+    <meta property="og:url" content="https://mysubb01.github.io/agent-ops-command-pack-teaser/order.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Order Agent Ops Mini-Sprint" />
+    <meta name="twitter:description" content="버그 트리아지, PR 리뷰, 배포 스모크팩을 고정 범위로 요청하세요." />
+    <title>Order Agent Ops Mini-Sprint</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172026;
+        --muted: #52616b;
+        --line: #d6dde3;
+        --surface: #ffffff;
+        --soft: #f4f7f8;
+        --accent: #0f766e;
+        --accent-2: #7c3aed;
+        --focus: #2563eb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--surface);
+        line-height: 1.65;
+      }
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+      nav a,
+      a {
+        color: var(--accent);
+      }
+      nav a {
+        font-weight: 760;
+        text-decoration: none;
+      }
+      a:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--focus) 28%, transparent);
+        outline-offset: 3px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        gap: 28px;
+        align-items: start;
+        padding: 44px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: 48px;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: 24px;
+      }
+      p {
+        margin: 0;
+      }
+      .lead {
+        color: var(--muted);
+        font-size: 19px;
+      }
+      .panel,
+      .offer {
+        border: 1px solid var(--line);
+        background: var(--soft);
+        padding: 18px;
+      }
+      .panel strong {
+        display: block;
+        color: var(--accent-2);
+        font-size: 26px;
+        line-height: 1.15;
+        margin-bottom: 10px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        color: #ffffff;
+        background: var(--accent);
+        text-decoration: none;
+        font-weight: 800;
+      }
+      .button.secondary {
+        color: var(--accent);
+        background: var(--soft);
+        border: 1px solid var(--line);
+      }
+      section {
+        padding: 32px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .offer {
+        background: #ffffff;
+      }
+      .offer strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 18px;
+      }
+      .price {
+        display: inline-flex;
+        margin: 12px 0;
+        padding: 6px 10px;
+        border: 1px solid var(--accent-2);
+        color: var(--accent-2);
+        font-weight: 800;
+      }
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 22px;
+      }
+      li + li {
+        margin-top: 6px;
+      }
+      .note {
+        color: var(--muted);
+      }
+      @media (max-width: 760px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Product links">
+        <a href="index.html">Agent Ops</a>
+        <a href="service.html">미니 스프린트</a>
+        <a href="SERVICE_MENU.md">서비스 메뉴</a>
+        <a href="generator.html">무료 생성기</a>
+        <a href="buy.html">구매 안내</a>
+        <a href="FAQ.md">FAQ</a>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>Order Agent Ops Mini-Sprint</h1>
+          <p class="lead">
+            가장 작은 유료 범위부터 시작하세요. 공개 GitHub issue에는 비밀값을 올리지 않고, 증상과 공개 링크만 남기면 범위, 가격, 산출물 기준을 먼저 확정합니다.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-pr-risk-review.yml">PR 리뷰 요청</a>
+            <a class="button secondary" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-bug-triage.yml">버그 트리아지 요청</a>
+            <a class="button secondary" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-deploy-smoke.yml">배포 스모크 요청</a>
+          </div>
+        </div>
+        <aside class="panel" aria-label="Fast order rule">
+          <strong>Fastest paid path</strong>
+          <p>공개 PR 링크, 증상 설명, 원하는 결과를 issue에 남기면 됩니다. 결제 링크나 인보이스는 견적 확인 뒤 공개 issue 밖에서 전달합니다.</p>
+        </aside>
+      </div>
+
+      <section>
+        <h2>Fixed Starter Scopes</h2>
+        <div class="grid">
+          <div class="offer">
+            <strong>PR Risk Review</strong>
+            <p>공개 PR이나 sanitized diff를 보고 버그, 회귀, 누락 테스트를 먼저 찾습니다.</p>
+            <div class="price">30-150 USD equivalent</div>
+            <div class="actions">
+              <a class="button" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-pr-risk-review.yml">Start PR review</a>
+            </div>
+          </div>
+          <div class="offer">
+            <strong>Bug Triage Note</strong>
+            <p>증상, 증거 경로, 가능성 높은 원인, 아직 증명 안 된 부분, 다음 수정 단계를 분리합니다.</p>
+            <div class="price">30-75 USD equivalent</div>
+            <div class="actions">
+              <a class="button" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-bug-triage.yml">Start triage</a>
+            </div>
+          </div>
+          <div class="offer">
+            <strong>Deploy Smoke Pack</strong>
+            <p>배포 후 확인할 엔드포인트, 명령, 롤백 감시 포인트, handoff note를 정리합니다.</p>
+            <div class="price">50-150 USD equivalent</div>
+            <div class="actions">
+              <a class="button" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-deploy-smoke.yml">Start smoke pack</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>What To Include</h2>
+        <ol>
+          <li>Public repo, PR, issue, deployment note, or sanitized log link.</li>
+          <li>What should be true when the work is done.</li>
+          <li>Risk focus: auth, deploy, data correction, user impact, tests, or rollback.</li>
+          <li>Budget readiness from the template dropdown.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Samples</h2>
+        <div class="grid">
+          <div class="offer">
+            <strong><a href="pages/sample-pr-risk-review-deliverable.html">PR review sample</a></strong>
+            <p>Severity-ordered findings and missing verification.</p>
+          </div>
+          <div class="offer">
+            <strong><a href="pages/sample-bug-triage-deliverable.html">Bug triage sample</a></strong>
+            <p>Symptom, evidence, likely cause, and next step.</p>
+          </div>
+          <div class="offer">
+            <strong><a href="SERVICE_MENU.md">Full service menu</a></strong>
+            <p>Pick a starter scope when the request is not obvious.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Safety</h2>
+        <ul>
+          <li>Do not post secrets, credentials, customer data, card details, wallet keys, or private payment details.</li>
+          <li>Private logs and private repo access are handled only after the public scope is accepted.</li>
+          <li>Work starts only after scope, delivery format, and payment path are agreed.</li>
+        </ul>
+        <p class="note">If the request is not a fit, I will say so before taking payment.</p>
+      </section>
+    </main>
+  </body>
+</html>

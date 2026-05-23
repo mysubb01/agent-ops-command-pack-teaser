@@ -4,6 +4,8 @@ Pick the smallest request that matches your current problem. Public GitHub issue
 
 Do not post secrets, tokens, private customer data, payment details, or credentials in public issues.
 
+Fast order page: https://mysubb01.github.io/agent-ops-command-pack-teaser/order.html
+
 | If you need... | Choose | Suggested budget | Request |
 |---|---|---:|---|
 | A production symptom explained from public/sanitized context | Bug triage note | 30-75 USD equivalent | [Open bug triage request](https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-bug-triage.yml) |

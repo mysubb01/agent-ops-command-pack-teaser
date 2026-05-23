@@ -18,6 +18,10 @@ Start here:
 
 https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
 
+Fast order page:
+
+https://mysubb01.github.io/agent-ops-command-pack-teaser/order.html
+
 Choose a starter scope:
 
 https://github.com/mysubb01/agent-ops-command-pack-teaser/blob/main/SERVICE_MENU.md
@@ -32,6 +36,7 @@ Fixed starter requests:
 
 - Buy page: https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html
 - Paid mini-sprints: https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
+- Fast order page: https://mysubb01.github.io/agent-ops-command-pack-teaser/order.html
 - Shareable Gist: https://gist.github.com/mysubb01/abfd2f8da7505a24f5cefe377563fb5f
 - Suggested launch price: 9 USD or equivalent
 - Purchase request: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml

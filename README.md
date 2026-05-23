@@ -22,6 +22,14 @@ Use the static prompt generator on GitHub Pages:
 
 https://mysubb01.github.io/agent-ops-command-pack-teaser/generator.html
 
+## Purchase Interest
+
+Checkout is not connected yet. To ask about buying the full pack, open a purchase-interest issue:
+
+https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
+
+Read the [FAQ](./FAQ.md) and [license notes](./LICENSE.md) before redistributing anything.
+
 ## Full Pack
 
 The full pack includes:

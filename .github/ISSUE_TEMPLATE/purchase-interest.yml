@@ -1,0 +1,52 @@
+name: Purchase interest
+description: Ask about buying Agent Ops Command Pack before checkout is connected.
+title: "Purchase interest: Agent Ops Command Pack"
+labels:
+  - purchase-interest
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in Agent Ops Command Pack.
+
+        Checkout is not connected yet, so this issue template collects purchase intent and questions.
+  - type: dropdown
+    id: license
+    attributes:
+      label: License type
+      options:
+        - Solo developer
+        - Small team
+        - Company/internal workspace
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What kind of AI operations workflow do you want to improve?
+      placeholder: "Example: incident triage, deploy checks, code review prompts, data correction safety..."
+    validations:
+      required: true
+  - type: dropdown
+    id: preferred-platform
+    attributes:
+      label: Preferred checkout platform
+      options:
+        - Gumroad
+        - Payhip
+        - Ko-fi
+        - GitHub Sponsors
+        - Other
+        - No preference
+    validations:
+      required: true
+  - type: textarea
+    id: questions
+    attributes:
+      label: Questions
+      description: Any questions before buying?
+    validations:
+      required: false
+

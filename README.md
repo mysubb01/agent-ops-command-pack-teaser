@@ -16,6 +16,12 @@ This public repo is the preview page for a paid digital pack. It intentionally i
 
 See [samples.md](./samples.md).
 
+## Free Prompt Generator
+
+Use the static prompt generator on GitHub Pages:
+
+https://mysubb01.github.io/agent-ops-command-pack-teaser/generator.html
+
 ## Full Pack
 
 The full pack includes:
@@ -32,4 +38,3 @@ The paid zip is prepared separately as `agent-ops-command-pack-v1.zip`.
 ## Suggested Price
 
 9 USD or equivalent.
-

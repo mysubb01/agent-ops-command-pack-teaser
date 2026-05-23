@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="운영, 배포, 코드 리뷰 상황에 맞는 한국어 AI 에이전트 명령문을 바로 생성하는 무료 도구."
+    />
+    <title>Agent Ops Prompt Generator</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172026;
+        --muted: #52616b;
+        --line: #d6dde3;
+        --paper: #ffffff;
+        --soft: #f4f7f8;
+        --field: #fbfcfd;
+        --primary: #0f766e;
+        --primary-ink: #0b4f4a;
+        --accent: #7c3aed;
+        --warn: #a16207;
+        --error: #b42318;
+        --focus: #2563eb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.55;
+      }
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px 18px 56px;
+      }
+      header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+      .title h1 {
+        margin: 0 0 8px;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+      .title p {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+      .nav {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      a.button,
+      button {
+        appearance: none;
+        border: 1px solid var(--line);
+        background: var(--soft);
+        color: var(--ink);
+        min-height: 40px;
+        padding: 0 14px;
+        font: inherit;
+        font-weight: 760;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a.button.primary,
+      button.primary {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #ffffff;
+      }
+      a.button:focus-visible,
+      button:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible,
+      input:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--focus) 28%, transparent);
+        outline-offset: 2px;
+      }
+      .workspace {
+        display: grid;
+        grid-template-columns: minmax(310px, 0.86fr) minmax(0, 1.14fr);
+        gap: 20px;
+        padding-top: 24px;
+      }
+      .panel {
+        border: 1px solid var(--line);
+        background: var(--paper);
+        padding: 18px;
+      }
+      .panel h2 {
+        margin: 0 0 16px;
+        font-size: 20px;
+        letter-spacing: 0;
+      }
+      .field {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+      label {
+        font-weight: 760;
+        font-size: 14px;
+      }
+      select,
+      textarea,
+      input {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: var(--field);
+        color: var(--ink);
+        font: inherit;
+        padding: 10px 11px;
+      }
+      textarea {
+        min-height: 118px;
+        resize: vertical;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .output {
+        min-height: 420px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 14px;
+      }
+      .status {
+        min-height: 24px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .status.error {
+        color: var(--error);
+      }
+      pre {
+        margin: 0;
+        padding: 16px;
+        border: 1px solid var(--line);
+        background: var(--soft);
+        white-space: pre-wrap;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .upsell {
+        margin-top: 20px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+      .upsell strong {
+        color: var(--ink);
+      }
+      @media (max-width: 840px) {
+        header,
+        .workspace {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+        .nav {
+          justify-content: flex-start;
+        }
+      }
+      @media (max-width: 560px) {
+        .title h1 {
+          font-size: 28px;
+        }
+        .row {
+          grid-template-columns: 1fr;
+        }
+        main {
+          padding-inline: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">
+          <h1>Agent Ops Prompt Generator</h1>
+          <p>상황을 고르면 AI 코딩 에이전트에게 바로 붙여 넣을 수 있는 한국어 운영 명령문을 생성합니다.</p>
+        </div>
+        <nav class="nav" aria-label="Product links">
+          <a class="button" href="index.html">랜딩</a>
+          <a class="button" href="samples.md">샘플</a>
+          <a class="button primary" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?title=Agent%20Ops%20Command%20Pack%20purchase">Full Pack</a>
+        </nav>
+      </header>
+
+      <div class="workspace">
+        <section class="panel" aria-labelledby="builder-title">
+          <h2 id="builder-title">명령문 만들기</h2>
+          <div class="field">
+            <label for="scenario">상황</label>
+            <select id="scenario">
+              <option value="incident">장애 확인</option>
+              <option value="deploy">배포 후 스모크</option>
+              <option value="review">코드 리뷰</option>
+              <option value="data">데이터 수정</option>
+              <option value="frontend">프론트 버그</option>
+              <option value="handoff">문서화/인수인계</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="scope">대상</label>
+              <input id="scope" value="프로덕션 서비스" />
+            </div>
+            <div class="field">
+              <label for="risk">중요도</label>
+              <select id="risk">
+                <option value="normal">일반</option>
+                <option value="high">높음</option>
+                <option value="money">돈/권한 관련</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="context">추가 맥락</label>
+            <textarea id="context" placeholder="예: 방금 배포 후 로그인 API 500이 늘었어. Render 로그와 DB 상태를 같이 봐야 해."></textarea>
+          </div>
+          <div class="actions">
+            <button class="primary" id="generate">생성</button>
+            <button id="reset">초기화</button>
+          </div>
+          <div class="upsell">
+            <strong>Full Pack</strong>에는 체크포인트 JSON, 장애 보고서, 배포 체크리스트, 더 많은 명령 템플릿이 포함됩니다.
+          </div>
+        </section>
+
+        <section class="panel output" aria-labelledby="output-title">
+          <div>
+            <h2 id="output-title">생성 결과</h2>
+            <div class="status" id="status">기본 장애 확인 명령문이 준비됐습니다.</div>
+          </div>
+          <pre id="result" tabindex="0"></pre>
+          <div class="actions">
+            <button class="primary" id="copy">복사</button>
+            <button id="download">텍스트 저장</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const templates = {
+        incident: ({ scope, context, risk }) => `대상: ${scope}
+
+이 알림이 실제로 현재도 진행 중인 장애인지 확인해줘. 배포 시각, 헬스체크, 에러 로그, 관련 API 응답을 나눠서 보고, 이미 종료된 과거 알림이면 그렇게 표시해줘.
+
+확인 순서:
+1. 최근 배포/설정 변경 여부
+2. 헬스체크와 핵심 API 응답
+3. 프론트 접근 가능 여부
+4. 서버 로그와 외부 의존성
+5. 사용자 영향 범위
+
+${risk === "high" ? "중요도가 높으니 현재 영향, 즉시 조치, 롤백 필요 여부를 먼저 말해줘." : ""}
+${risk === "money" ? "돈/권한과 관련될 수 있으니 잔액, 권한, 감사 로그는 읽기 전용으로 먼저 확인하고 수정은 별도 승인 전까지 하지 마." : ""}
+추가 맥락: ${context || "없음"}`,
+        deploy: ({ scope, context, risk }) => `대상: ${scope}
+
+배포가 끝났다고 가정하지 말고 실제 운영 주소 기준으로 확인해줘. 헬스체크, 핵심 API, 주요 화면, 콘솔/네트워크 에러, 데이터 반영 여부를 확인하고 결과를 표로 남겨줘.
+
+필수 확인:
+1. 배포 커밋/브랜치
+2. 헬스체크
+3. 로그인/세션
+4. 핵심 조회 API
+5. 핵심 변경 API
+6. 주요 화면 모바일/데스크톱
+7. 배포 후 새 로그 에러
+
+${risk === "high" ? "문제가 하나라도 있으면 정상 배포라고 말하지 말고 롤백/핫픽스 판단을 먼저 해줘." : ""}
+${risk === "money" ? "돈/권한 경로는 실제 변경 요청 전 읽기 전용 검증과 감사 로그 확인을 우선해줘." : ""}
+추가 맥락: ${context || "없음"}`,
+        review: ({ scope, context, risk }) => `대상: ${scope}
+
+코드 리뷰 모드로 봐줘. 칭찬보다 버그, 회귀, 보안, 누락 테스트를 먼저 찾아줘. 파일/라인 근거를 붙이고, 심각도 순서로 정리해줘.
+
+리뷰 기준:
+1. 요구사항 충족 여부
+2. 회귀 가능성
+3. 인증/권한/데이터 경계
+4. 실패 상태와 빈 데이터
+5. 테스트 누락
+6. 배포 리스크
+
+${risk === "money" ? "돈/권한 관련 변경이면 원장, 감사 로그, idempotency, rollback 가능성을 별도 항목으로 확인해줘." : ""}
+추가 맥락: ${context || "없음"}`,
+        data: ({ scope, context, risk }) => `대상: ${scope}
+
+실제 데이터를 수정하기 전에 읽기 전용 쿼리로 현재 상태를 증명해줘. 어떤 row를 왜 바꾸는지, 변경 전 값과 변경 후 예상 값을 먼저 보여줘. 수정 후에는 같은 기준으로 재조회하고 감사 로그를 남겨줘.
+
+진행 규칙:
+1. 수정 대상 row를 먼저 특정
+2. 변경 전 값을 표로 기록
+3. 단일 진실 테이블이 무엇인지 확인
+4. 최소 변경만 실행
+5. 변경 후 재조회
+6. 감사 로그/운영 기록 남김
+
+${risk === "money" || risk === "high" ? "잔액이나 권한을 직접 덮어쓰지 말고 원장/의무/정산 흐름 중 어느 경로가 맞는지 먼저 판단해줘." : ""}
+추가 맥락: ${context || "없음"}`,
+        frontend: ({ scope, context, risk }) => `대상: ${scope}
+
+이 화면 버그를 DOM, 네트워크 응답, 상태 관리, CSS 레이아웃으로 나눠서 확인해줘. 스크린샷이나 브라우저 검증이 가능하면 실제 화면 기준으로 판단해줘.
+
+확인 기준:
+1. 재현 경로
+2. 네트워크 응답
+3. 상태 값 변화
+4. DOM/CSS 레이아웃
+5. 모바일 폭
+6. 콘솔 에러
+
+임시 방어 코드를 여러 곳에 넣지 말고, 데이터가 잘못 만들어지는 원천이나 상태 흐름의 단일 제어 지점을 찾아서 고쳐줘.
+${risk === "high" ? "사용자 주요 흐름을 막는 버그라면 우회 방법과 배포 우선순위도 같이 판단해줘." : ""}
+추가 맥락: ${context || "없음"}`,
+        handoff: ({ scope, context, risk }) => `대상: ${scope}
+
+이번 작업을 나중에 다시 찾기 쉽게 문서화해줘. 문제, 원인, 변경 파일, 검증 명령, 남은 리스크, 다음 사람이 이어받을 때 볼 위치를 짧게 정리해줘.
+
+포함 항목:
+1. 문제 요약
+2. 원인
+3. 변경 내용
+4. 검증 결과
+5. 남은 리스크
+6. 다음 행동
+
+${risk === "money" ? "돈/권한 관련 사항은 변경 전후 값과 감사 로그 위치를 반드시 포함해줘." : ""}
+추가 맥락: ${context || "없음"}`
+      };
+
+      const scenario = document.querySelector("#scenario");
+      const scopeInput = document.querySelector("#scope");
+      const risk = document.querySelector("#risk");
+      const contextInput = document.querySelector("#context");
+      const result = document.querySelector("#result");
+      const status = document.querySelector("#status");
+
+      function buildPrompt() {
+        const data = {
+          scope: scopeInput.value.trim() || "프로덕션 서비스",
+          risk: risk.value,
+          context: contextInput.value.trim()
+        };
+        result.textContent = templates[scenario.value](data).replace(/\n{3,}/g, "\n\n").trim();
+        status.textContent = "명령문이 생성됐습니다.";
+        status.classList.remove("error");
+      }
+
+      document.querySelector("#generate").addEventListener("click", buildPrompt);
+      document.querySelector("#reset").addEventListener("click", () => {
+        scenario.value = "incident";
+        scopeInput.value = "프로덕션 서비스";
+        risk.value = "normal";
+        contextInput.value = "";
+        buildPrompt();
+      });
+      document.querySelector("#copy").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(result.textContent);
+          status.textContent = "복사됐습니다.";
+          status.classList.remove("error");
+        } catch {
+          status.textContent = "복사 권한이 막혔습니다. 결과 영역을 직접 선택해 복사해 주세요.";
+          status.classList.add("error");
+        }
+      });
+      document.querySelector("#download").addEventListener("click", () => {
+        const blob = new Blob([result.textContent], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "agent-ops-prompt.txt";
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      });
+
+      buildPrompt();
+    </script>
+  </body>
+</html>
+

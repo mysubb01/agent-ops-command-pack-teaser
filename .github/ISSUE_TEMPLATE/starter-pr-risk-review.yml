@@ -1,0 +1,49 @@
+name: "Starter: PR risk review"
+description: Request a fixed-scope PR or diff risk review.
+title: "Starter PR risk review: "
+labels:
+  - paid-sprint
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fixed starter scope: PR risk review, suggested budget 30-150 USD equivalent depending on size.
+
+        Output: severity-ordered findings, file/line references where possible, failure conditions, and missing verification.
+
+        Do not post secrets, tokens, private customer data, payment details, or credentials. If the request fits, invoice/payment handoff happens privately before work starts.
+  - type: input
+    id: pr-url
+    attributes:
+      label: PR or diff URL
+      description: Public PR URL is best. Use sanitized context if private.
+      placeholder: "https://github.com/org/repo/pull/123"
+    validations:
+      required: true
+  - type: textarea
+    id: risk-focus
+    attributes:
+      label: Risk focus
+      description: What should the review prioritize?
+      placeholder: "Example: auth contract, duplicate side effects, missing tests, production deploy risk."
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Budget readiness
+      options:
+        - "30-150 USD equivalent is OK if scope fits"
+        - "Need quote first"
+        - "Not ready to pay yet"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included secrets, credentials, private payment details, or private customer data.
+          required: true
+        - label: I understand work starts only after scope, delivery format, and payment path are agreed.
+          required: true

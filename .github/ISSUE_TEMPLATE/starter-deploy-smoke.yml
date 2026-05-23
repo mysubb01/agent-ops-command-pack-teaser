@@ -1,0 +1,49 @@
+name: "Starter: deploy smoke pack"
+description: Request a fixed-scope deploy smoke checklist and handoff.
+title: "Starter deploy smoke: "
+labels:
+  - paid-sprint
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fixed starter scope: deploy smoke pack, suggested budget 50-150 USD equivalent.
+
+        Output: deploy-specific smoke checklist, commands/endpoints to verify, rollback watchpoints, and handoff notes.
+
+        Do not post secrets, tokens, private customer data, payment details, or credentials. If the request fits, invoice/payment handoff happens privately before work starts.
+  - type: textarea
+    id: deploy-context
+    attributes:
+      label: Deploy context
+      description: What changed, what stack is involved, and what must be proven after deploy?
+      placeholder: "Example: Next.js admin auth route fix; need signin, protected page access, and mutation authorization smoke."
+    validations:
+      required: true
+  - type: textarea
+    id: public-links
+    attributes:
+      label: Public or sanitized links
+      description: Public PR, release notes, status page, endpoints, or sanitized deployment notes.
+      placeholder: "Share only public or sanitized context."
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Budget readiness
+      options:
+        - "50-150 USD equivalent is OK if scope fits"
+        - "Need quote first"
+        - "Not ready to pay yet"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included secrets, credentials, private payment details, or private customer data.
+          required: true
+        - label: I understand work starts only after scope, delivery format, and payment path are agreed.
+          required: true

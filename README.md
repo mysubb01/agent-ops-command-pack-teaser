@@ -18,6 +18,12 @@ Start here:
 
 https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
 
+Fixed starter requests:
+
+- Bug triage note: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-bug-triage.yml
+- PR risk review: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-pr-risk-review.yml
+- Deploy smoke pack: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-deploy-smoke.yml
+
 ## Buy / Preview
 
 - Buy page: https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html

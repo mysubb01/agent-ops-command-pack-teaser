@@ -20,6 +20,12 @@ Small paid help for teams using AI coding agents in real operations work.
 | Small automation spec | Scoped plan and implementation-ready acceptance criteria | 75-200 USD equivalent |
 | AI-code cleanup sprint | Small patch or clear handoff after review | Quote after context |
 
+## Fixed Starter Requests
+
+- Bug triage note: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-bug-triage.yml
+- PR risk review: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-pr-risk-review.yml
+- Deploy smoke pack: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-deploy-smoke.yml
+
 ## Sample Deliverables
 
 - Bug triage sample: https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-bug-triage-deliverable.html

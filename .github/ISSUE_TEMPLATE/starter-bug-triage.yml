@@ -1,0 +1,49 @@
+name: "Starter: bug triage note"
+description: Request a fixed-scope production bug triage note from public or sanitized context.
+title: "Starter bug triage: "
+labels:
+  - paid-sprint
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fixed starter scope: bug triage note, suggested budget 30-75 USD equivalent.
+
+        Output: symptom summary, evidence path, likely cause, not-proven items, and next fix step.
+
+        Do not post secrets, tokens, private customer data, payment details, or credentials. If the request fits, invoice/payment handoff happens privately before work starts.
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Symptom
+      description: What is broken, and who is affected?
+      placeholder: "Example: After deploy, login works but /api/orders returns 500 and the orders page is empty."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Public or sanitized context
+      description: Public repo/issue URLs, sanitized logs, screenshots, timestamps, or reproduction notes.
+      placeholder: "Share only public or sanitized context."
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Budget readiness
+      options:
+        - "30-75 USD equivalent is OK if scope fits"
+        - "Need quote first"
+        - "Not ready to pay yet"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included secrets, credentials, private payment details, or private customer data.
+          required: true
+        - label: I understand work starts only after scope, delivery format, and payment path are agreed.
+          required: true

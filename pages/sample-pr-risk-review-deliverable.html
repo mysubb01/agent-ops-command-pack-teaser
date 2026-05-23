@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="유료 PR 리스크 리뷰 미니 스프린트에서 받을 수 있는 샘플 산출물."
+    />
+    <title>Sample PR Risk Review Deliverable</title>
+    <link rel="canonical" href="https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-pr-risk-review-deliverable.html" />
+    <link rel="stylesheet" href="../shared.css" />
+  </head>
+  <body>
+    <main class="usecase">
+      <nav class="topnav">
+        <a href="../index.html">Agent Ops</a>
+        <a href="../service.html">유료 미니 스프린트</a>
+        <a href="pr-risk-review-service.html">PR 리스크 리뷰</a>
+      </nav>
+      <article>
+        <p class="eyebrow">Sample Deliverable</p>
+        <h1>PR 리스크 리뷰 샘플</h1>
+        <p class="lead">
+          실제 고객 코드가 아닌 가상 예시입니다. 유료 리뷰에서는 칭찬보다 배포 후 깨질 가능성, 누락 테스트, 잘못된 계약을 먼저 봅니다.
+        </p>
+
+        <h2>Findings</h2>
+        <pre>P1 - New retry loop can duplicate side effects.
+File: `src/jobs/sendReceipt.ts`
+Risk:
+- The retry wrapper calls `sendEmail()` again after a timeout.
+- There is no idempotency key or sent-receipt record check.
+- A slow provider response can create duplicate customer emails.
+
+Suggested fix:
+- Record a stable receipt id before calling the provider.
+- Skip sends when that receipt id is already marked `sent` or `sending`.
+- Add a test for provider timeout followed by retry.
+
+P2 - Test only covers the happy path.
+File: `tests/sendReceipt.test.ts`
+Risk:
+- The new test proves one successful send.
+- It does not cover timeout, provider 500, duplicate job delivery, or missing recipient.
+
+Suggested fix:
+- Add failure-path tests before merging the retry behavior.</pre>
+
+        <h2>Review Shape</h2>
+        <ul>
+          <li>Findings first, ordered by severity</li>
+          <li>File/path references when the context includes code</li>
+          <li>Concrete failure condition, not vague style feedback</li>
+          <li>Small test or verification suggestion for each risky change</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="button" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=paid-sprint.yml">이런 리뷰 요청</a>
+          <a class="button secondary" href="../service.html">서비스로 돌아가기</a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

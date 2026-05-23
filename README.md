@@ -62,6 +62,11 @@ Best first scopes:
 
 See [SERVICE.md](./SERVICE.md) for starter offers and safety rules.
 
+Sample deliverables:
+
+- Bug triage sample: https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-bug-triage-deliverable.html
+- PR risk review sample: https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-pr-risk-review-deliverable.html
+
 ## Full Pack
 
 The full pack includes:

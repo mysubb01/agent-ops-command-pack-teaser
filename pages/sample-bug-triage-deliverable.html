@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="유료 프로덕션 버그 트리아지 미니 스프린트에서 받을 수 있는 샘플 산출물."
+    />
+    <title>Sample Bug Triage Deliverable</title>
+    <link rel="canonical" href="https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-bug-triage-deliverable.html" />
+    <link rel="stylesheet" href="../shared.css" />
+  </head>
+  <body>
+    <main class="usecase">
+      <nav class="topnav">
+        <a href="../index.html">Agent Ops</a>
+        <a href="../service.html">유료 미니 스프린트</a>
+        <a href="production-bug-triage-service.html">버그 트리아지</a>
+      </nav>
+      <article>
+        <p class="eyebrow">Sample Deliverable</p>
+        <h1>프로덕션 버그 트리아지 샘플</h1>
+        <p class="lead">
+          실제 고객 데이터가 아닌 가상 예시입니다. 유료 트리아지에서는 이런 식으로 증상, 증거, 원인 후보, 다음 조치를 분리해서 전달합니다.
+        </p>
+
+        <h2>Input Summary</h2>
+        <ul>
+          <li>증상: 배포 후 로그인은 되지만 `/api/orders`만 500 응답</li>
+          <li>사용자 영향: 주문 목록 화면이 비어 보임</li>
+          <li>제공된 자료: public stack trace 일부, 최근 PR 링크, 배포 시각</li>
+        </ul>
+
+        <h2>Findings</h2>
+        <pre>P1 - API route reads a newly required env var without fallback.
+Evidence:
+- `api/orders.ts` now creates the service client during module load.
+- The deployment log starts failing immediately after import, before request handling.
+- Other authenticated routes still return 200, so this is not a global auth outage.
+
+P2 - Frontend masks the server failure as an empty state.
+Evidence:
+- The list component renders `[]` after catch.
+- No visible error message or retry path is shown to the operator.
+
+Not proven:
+- Database outage. No evidence yet; health route and unrelated reads still work.
+- User token issue. Sign-in and profile route still work.</pre>
+
+        <h2>Next Fix Step</h2>
+        <ul>
+          <li>Move service-client creation inside the handler or validate env at boot with a clear error.</li>
+          <li>Return a typed error response for config failures.</li>
+          <li>Change the frontend catch path to show an operational error instead of empty data.</li>
+          <li>Verify with one direct API call and one browser smoke after deploy.</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="button" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=paid-sprint.yml">이런 트리아지 요청</a>
+          <a class="button secondary" href="../service.html">서비스로 돌아가기</a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

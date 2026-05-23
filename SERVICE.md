@@ -20,6 +20,11 @@ Small paid help for teams using AI coding agents in real operations work.
 | Small automation spec | Scoped plan and implementation-ready acceptance criteria | 75-200 USD equivalent |
 | AI-code cleanup sprint | Small patch or clear handoff after review | Quote after context |
 
+## Sample Deliverables
+
+- Bug triage sample: https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-bug-triage-deliverable.html
+- PR risk review sample: https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/sample-pr-risk-review-deliverable.html
+
 ## Request Work
 
 Open a paid mini-sprint request:

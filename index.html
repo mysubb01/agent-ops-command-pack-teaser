@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI 코딩 에이전트에게 장애 대응, 배포, 코드 리뷰, 데이터 수정, 문서화를 맡길 때 쓰는 한국어 명령 템플릿 팩."
+    />
+    <title>Agent Ops Command Pack</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172026;
+        --muted: #52616b;
+        --line: #d6dde3;
+        --surface: #ffffff;
+        --soft: #f4f7f8;
+        --accent: #0f766e;
+        --accent-2: #7c3aed;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--surface);
+      }
+      main {
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 56px 20px 76px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+        gap: 34px;
+        align-items: center;
+        min-height: 560px;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        margin: 0 0 18px;
+        font-size: 54px;
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .lead {
+        margin: 0;
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.7;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        color: #fff;
+        background: var(--accent);
+        text-decoration: none;
+        font-weight: 800;
+      }
+      a.button.secondary {
+        color: var(--accent);
+        background: var(--soft);
+        border: 1px solid var(--line);
+      }
+      .preview {
+        border: 1px solid var(--line);
+        background: var(--soft);
+        padding: 18px;
+      }
+      .preview h2 {
+        margin-top: 0;
+      }
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: keep-all;
+        line-height: 1.65;
+        font-size: 15px;
+        color: #24343c;
+      }
+      section {
+        padding: 36px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      h2 {
+        margin: 0 0 16px;
+        font-size: 26px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .cell {
+        border: 1px solid var(--line);
+        padding: 16px;
+        background: #fff;
+      }
+      .cell strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .price {
+        display: inline-flex;
+        margin-top: 12px;
+        padding: 8px 12px;
+        border: 1px solid var(--accent-2);
+        color: var(--accent-2);
+        font-weight: 800;
+      }
+      footer {
+        padding-top: 24px;
+        color: var(--muted);
+      }
+      @media (max-width: 780px) {
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+          padding-bottom: 34px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <div>
+          <h1>Agent Ops Command Pack</h1>
+          <p class="lead">
+            AI 코딩 에이전트에게 장애 대응, 배포, 코드 리뷰, 데이터 수정, 문서화를 더 정확히 맡기기 위한 한국어 실전 명령 템플릿 팩입니다.
+          </p>
+          <div class="price">Full pack suggested price: $9</div>
+          <div class="actions">
+            <a class="button" href="samples.md">무료 샘플 보기</a>
+            <a class="button secondary" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?title=Agent%20Ops%20Command%20Pack%20purchase">구매 문의</a>
+          </div>
+        </div>
+        <div class="preview">
+          <h2>샘플 명령</h2>
+          <pre>이 알림이 실제로 현재도 진행 중인 장애인지 확인해줘. 배포 시각, 헬스체크, 에러 로그, 관련 API 응답을 나눠서 보고, 이미 종료된 과거 알림이면 그렇게 표시해줘.</pre>
+        </div>
+      </div>
+
+      <section>
+        <h2>Included In The Full Pack</h2>
+        <div class="grid">
+          <div class="cell"><strong>Operations</strong>장애 확인, 원인 분리, 고객 안내 문구</div>
+          <div class="cell"><strong>Deploy</strong>배포 전 리스크 점검, 배포 후 스모크</div>
+          <div class="cell"><strong>Review</strong>버그, 회귀, 테스트 누락 중심 코드 리뷰</div>
+          <div class="cell"><strong>Data Safety</strong>수정 전 읽기 전용 증거, 수정 후 재검증</div>
+          <div class="cell"><strong>Docs</strong>PR 설명, 운영 이슈 보고서, handoff</div>
+          <div class="cell"><strong>Templates</strong>JSON 체크포인트와 체크리스트 파일</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Who It Is For</h2>
+        <p class="lead">
+          혼자 배포와 운영 이슈를 처리하는 개발자, 작은 팀의 리드, AI 에이전트를 업무에 쓰지만 결과 품질이 들쭉날쭉했던 사람에게 맞습니다.
+        </p>
+      </section>
+
+      <footer>
+        Replace the purchase link with Gumroad, Payhip, Ko-fi, or another checkout URL when the payout account is ready.
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AI 코딩 에이전트에게 운영 장애 확인을 맡길 때 쓰는 한국어 장애 triage 명령문 샘플." />
+    <title>AI 운영 장애 확인 프롬프트</title>
+    <link rel="canonical" href="https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/incident-triage.html" />
+    <link rel="stylesheet" href="../shared.css" />
+  </head>
+  <body>
+    <main class="usecase">
+      <nav class="topnav"><a href="../index.html">Agent Ops</a><a href="../generator.html">무료 생성기</a><a href="../samples.md">샘플</a></nav>
+      <article>
+        <p class="eyebrow">Incident Triage</p>
+        <h1>AI에게 장애 확인을 맡길 때 첫 문장</h1>
+        <p class="lead">장애 알림을 받았을 때 제일 위험한 건 “현재도 진행 중인지” 확인하지 않고 원인부터 단정하는 것입니다.</p>
+        <pre>이 알림이 실제로 현재도 진행 중인 장애인지 확인해줘. 배포 시각, 헬스체크, 에러 로그, 관련 API 응답을 나눠서 보고, 이미 종료된 과거 알림이면 그렇게 표시해줘.</pre>
+        <h2>확인 순서</h2>
+        <ul>
+          <li>최근 배포/설정 변경 여부</li>
+          <li>헬스체크와 핵심 API 응답</li>
+          <li>프론트 접근 가능 여부</li>
+          <li>서버 로그와 외부 의존성</li>
+          <li>사용자 영향 범위</li>
+        </ul>
+        <div class="cta-row">
+          <a class="button" href="../generator.html">내 상황에 맞게 생성</a>
+          <a class="button secondary" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml">Full Pack 문의</a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
+

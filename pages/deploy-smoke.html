@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="배포 후 AI 에이전트에게 운영 스모크 체크를 맡기는 한국어 명령문 샘플." />
+    <title>AI 배포 후 스모크 체크 프롬프트</title>
+    <link rel="canonical" href="https://mysubb01.github.io/agent-ops-command-pack-teaser/pages/deploy-smoke.html" />
+    <link rel="stylesheet" href="../shared.css" />
+  </head>
+  <body>
+    <main class="usecase">
+      <nav class="topnav"><a href="../index.html">Agent Ops</a><a href="../generator.html">무료 생성기</a><a href="../samples.md">샘플</a></nav>
+      <article>
+        <p class="eyebrow">Deploy Smoke</p>
+        <h1>배포 완료 후 “진짜 정상”인지 확인시키기</h1>
+        <p class="lead">배포 성공 표시와 운영 정상은 다릅니다. 실제 주소, 핵심 API, 화면, 로그를 함께 확인해야 합니다.</p>
+        <pre>배포가 끝났다고 가정하지 말고 실제 운영 주소 기준으로 확인해줘. 헬스체크, 핵심 API, 주요 화면, 콘솔/네트워크 에러, 데이터 반영 여부를 확인하고 결과를 표로 남겨줘.</pre>
+        <h2>필수 체크</h2>
+        <ul>
+          <li>배포 커밋과 브랜치</li>
+          <li>헬스체크와 로그인/세션</li>
+          <li>핵심 조회/변경 API</li>
+          <li>주요 화면의 콘솔/네트워크 에러</li>
+          <li>배포 후 15분 신규 에러</li>
+        </ul>
+        <div class="cta-row">
+          <a class="button" href="../generator.html">내 배포 상황으로 생성</a>
+          <a class="button secondary" href="https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml">Full Pack 문의</a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
+

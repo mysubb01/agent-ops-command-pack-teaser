@@ -7,8 +7,10 @@ This public repo is the preview page for a paid digital pack. It intentionally i
 ## Buy / Preview
 
 - Buy page: https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html
+- Paid mini-sprints: https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
 - Suggested launch price: 9 USD or equivalent
 - Purchase request: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
+- Paid work request: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=paid-sprint.yml
 - Free browser generator: https://mysubb01.github.io/agent-ops-prompt-generator/
 - Free CLI:
 
@@ -43,6 +45,22 @@ https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=pu
 See the [buy page](https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html) for price, delivery, and license notes.
 
 Read the [FAQ](./FAQ.md) and [license notes](./LICENSE.md) before redistributing anything.
+
+## Paid Mini-Sprints
+
+If you need a small paid sprint instead of the template pack, open a request:
+
+https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=paid-sprint.yml
+
+Best first scopes:
+
+- production bug triage from public or sanitized context
+- AI-generated code cleanup
+- PR risk review
+- deploy smoke checklist
+- internal workflow automation scope
+
+See [SERVICE.md](./SERVICE.md) for starter offers and safety rules.
 
 ## Full Pack
 

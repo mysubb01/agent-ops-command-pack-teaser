@@ -1,0 +1,74 @@
+name: Paid mini-sprint request
+description: Request a small paid AI-agent operations, debugging, review, or automation sprint.
+title: "Paid mini-sprint request: "
+labels:
+  - paid-sprint
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for a small paid request around production debugging, AI-agent workflow cleanup, code review prompts, deploy smoke checks, or internal automation.
+
+        Do not post secrets, tokens, private customer data, payment details, or credentials. Share public repo links or sanitized context only.
+  - type: dropdown
+    id: sprint-type
+    attributes:
+      label: Sprint type
+      options:
+        - Production bug triage
+        - AI-generated code cleanup
+        - Code review / risk review
+        - Deploy smoke checklist
+        - Internal tool or automation
+        - Prompt/workflow template
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Desired outcome
+      description: What should be true when the sprint is done?
+      placeholder: "Example: identify why this API route fails in production and provide a small patch or reproducible evidence."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Public or sanitized context
+      description: Share links, logs, screenshots, or repo paths that are safe to post publicly.
+      placeholder: "Public repo/issue URL, sanitized error text, or a brief description."
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Budget range
+      options:
+        - 30-75 USD equivalent
+        - 75-150 USD equivalent
+        - 150-300 USD equivalent
+        - 300+ USD equivalent
+        - Need quote first
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      options:
+        - Same day if available
+        - 1-2 days
+        - This week
+        - Flexible
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included secrets, credentials, private payment details, or private customer data.
+          required: true
+        - label: I understand this public issue is only an intake request; private details and payment flow should be handled outside the public issue.
+          required: true

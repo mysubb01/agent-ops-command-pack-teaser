@@ -18,6 +18,10 @@ Start here:
 
 https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
 
+Choose a starter scope:
+
+https://github.com/mysubb01/agent-ops-command-pack-teaser/blob/main/SERVICE_MENU.md
+
 Fixed starter requests:
 
 - Bug triage note: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=starter-bug-triage.yml

@@ -1,8 +1,22 @@
 # Agent Ops Command Pack
 
-Korean command templates for using AI coding agents in real operations work.
+Paid AI-agent operations mini-sprints and Korean command templates for real operations work.
 
-This public repo is the preview page for a paid digital pack. It intentionally includes only samples, not the full product archive.
+This public repo is both a service intake page and a preview page for a paid digital pack. It includes public samples, paid sprint request links, and free tools, but not the full product archive.
+
+## Paid Service
+
+Small paid sprints are available for:
+
+- production bug triage
+- PR risk review
+- AI-generated code cleanup
+- deploy smoke checks
+- internal automation scoping
+
+Start here:
+
+https://mysubb01.github.io/agent-ops-command-pack-teaser/service.html
 
 ## Buy / Preview
 

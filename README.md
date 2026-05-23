@@ -4,6 +4,18 @@ Korean command templates for using AI coding agents in real operations work.
 
 This public repo is the preview page for a paid digital pack. It intentionally includes only samples, not the full product archive.
 
+## Buy / Preview
+
+- Buy page: https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html
+- Suggested launch price: 9 USD or equivalent
+- Purchase request: https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
+- Free browser generator: https://mysubb01.github.io/agent-ops-prompt-generator/
+- Free CLI:
+
+```bash
+npx --yes github:mysubb01/agent-ops-prompt-generator incident --target admin-api --risk high --context "500 errors after deploy"
+```
+
 ## What It Helps With
 
 - Incident triage
@@ -28,7 +40,7 @@ Checkout is not connected yet. To request the full pack and receive the checkout
 
 https://github.com/mysubb01/agent-ops-command-pack-teaser/issues/new?template=purchase-interest.yml
 
-See [BUY.md](./BUY.md) for price, delivery, and license notes.
+See the [buy page](https://mysubb01.github.io/agent-ops-command-pack-teaser/buy.html) for price, delivery, and license notes.
 
 Read the [FAQ](./FAQ.md) and [license notes](./LICENSE.md) before redistributing anything.
 
